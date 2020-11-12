@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
-import Card from '@bit/react-bootstrap.react-bootstrap.card';
+import Card from 'react-bootstrap/Card'
 
 
 export class Product extends Component {
     constructor(props) {
         super(props);
-
     }
     render() {
         const product = this.props.product;

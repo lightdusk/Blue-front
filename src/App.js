@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ProductList from './Components/ProductList';
 import ProductRetriever from "./ProductRetriever";
@@ -26,7 +25,6 @@ class App extends Component {
         ProductRetriever.getProductCount().then(response => this.setState({productCount: response.count}));
     }
     getNewPage = (newPage) => {
-        console.log("i have new na it is " + newPage);
         this.setState({currentPage: newPage});
         this.setProducts(newPage,this.state.productsPerPage);
     }

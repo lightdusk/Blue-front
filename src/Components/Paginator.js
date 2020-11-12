@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Pagination from '@bit/react-bootstrap.react-bootstrap.pagination'
+import Pagination from 'react-bootstrap/pagination'
 
 
 export default class Paginator extends Component {
@@ -7,15 +7,8 @@ export default class Paginator extends Component {
     constructor(props) {
         super(props);
     }
-    // props = {
-    //     itemCount: 0,
-    //     currentPage: 0,
-    //     itemsPerPage: 0,
-    // }
     pagechanged = (event) => {
-        console.log(event);
         const page = +event.target.attributes["data-page"]?.value;
-        console.log(page);
         if(typeof page === "number") {
             this.props.onPageUpdate(page);
         }
@@ -24,10 +17,7 @@ export default class Paginator extends Component {
     getLastPage = () => Math.floor(this.props.itemCount / this.props.itemsPerPage);
 
     render() {
-        console.log(this.getLastPage());
         const currentPage = this.props.currentPage;
-        console.log("the current page is " + currentPage)
-        console.log("the last page is actually " + this.getLastPage());
         return (
             <Pagination onClick={this.pagechanged}>
                 <Pagination.First data-page={0} disabled={currentPage === 0}/>
