@@ -3,12 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@bit/react-bootstrap.react-bootstrap.button": "file:./components/button",
+    "@bit/react-bootstrap.react-bootstrap.card": "file:./components/card",
+    "@bit/react-bootstrap.react-bootstrap.pagination": "file:./components/pagination",
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
     "@testing-library/user-event": "^12.2.0",
+    "atomize": "^1.0.26",
+    "bootstrap": "^4.5.3",
+    "dotenv": "^8.2.0",
     "react": "^17.0.1",
+    "react-atomize": "^1.0.33",
+    "react-bootstrap": "^1.4.0",
+    "react-bootstrap-range-slider": "^2.0.2",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.0",
+    "react-scripts": "^4.0.0",
+    "react-transition-group": "^4.4.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -34,5 +44,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "bit": {
+    "env": {},
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
   }
 }
